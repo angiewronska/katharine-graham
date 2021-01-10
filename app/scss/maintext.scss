@@ -1,0 +1,53 @@
+@import 'variables';
+
+.text {
+  margin: auto {
+    top: -30px;
+    bottom: 60px;
+  }
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  color: $colorTextMain;
+  line-height: 1.5;
+  font: {
+    family: $fontText;
+    weight: 400;
+  }
+ 
+  &__paragraph {
+    font-size: 16px;
+  }
+  &__quote {
+    position: relative;
+    margin-top: 30px;
+    color: $colorTextFocus;
+    line-height: 1.2;
+    font: {
+      family: $fontHeadline;
+      size: 40px;
+      weight: 700;
+      style: italic;
+    }
+    &::before {
+      position: absolute;
+      top: -35px;
+      left: -56px;
+      z-index: -1;
+      display: block;
+      background-image: url('../img/quote.png');
+      width: 73px;
+      height: 59px;
+      content: '';
+    }
+  }
+  &__quote-author {
+    margin: {
+      top: 15px;
+      bottom: 30px;
+    }
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
