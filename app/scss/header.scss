@@ -1,0 +1,51 @@
+@import 'variables';
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100vh;
+  &__title {
+    position: absolute;
+    top: 20vh;
+    right: 40vw;
+    width: 600px;
+    color: $colorTextMain;
+    &-main {
+      margin: 0;
+      text-align: right;
+      line-height: 1;
+      font: {
+        family: $fontHeadline;
+        weight: 400;
+        size: 156px;
+      }
+    }
+    &-secondary {
+      padding-left: 125px;
+      color: $colorTextSecondary;
+      font: {
+        family: $fontHeadline;
+        size: 26px;
+        weight: 400;
+        style: italic;
+      }
+    }
+  }
+  &__image {
+    display: flex;
+    justify-content: flex-end;
+    &-image {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      z-index: -1;
+    }
+    &-caption {
+      position: absolute;
+      bottom: 15%;
+      right: 12%;
+    }
+  }
+}
