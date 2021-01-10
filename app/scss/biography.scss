@@ -1,0 +1,20 @@
+@import 'variables';
+
+.biography {
+  display: flex;
+  flex-direction: row;
+  max-width: 956px;
+  margin: 60px auto;
+  &__text {
+    padding-left: 115px;
+    &-headline {
+      color: $colorTextMain;
+      line-height: 1.2;
+      font: {
+        family: $fontHeadline;
+        size: 36px;
+        weight: 700;
+      }
+    }
+  }
+}

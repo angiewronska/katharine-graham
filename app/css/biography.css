@@ -1,0 +1,13 @@
+.biography {
+  display: flex;
+  flex-direction: row;
+  max-width: 956px;
+  margin: 60px auto; }
+  .biography__text {
+    padding-left: 115px; }
+    .biography__text-headline {
+      color: #1f1f1f;
+      line-height: 1.2;
+      font-family: "EB Garamond", serif;
+      font-size: 36px;
+      font-weight: 700; }
