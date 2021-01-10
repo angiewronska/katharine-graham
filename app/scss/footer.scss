@@ -1,0 +1,19 @@
+@import 'variables';
+
+.footer {
+  display: flex;
+  background-color: $colorTextMain;
+  justify-content: center;
+  padding: 30px 15px;
+  &__text {
+    color: $colorBg;
+    font: {
+      family: $fontText;
+      size: 14px;
+      weight: 300;
+    }
+    strong {
+      font-weight: 400;
+    }
+  }
+}
