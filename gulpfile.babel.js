@@ -1,14 +1,13 @@
 const { watch, src, dest, series, parallel } = require('gulp');
+const babel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
-const scss = require('gulp-sass');
+const changed = require('gulp-changed');
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
-const changed = require('gulp-changed');
-const imagemin = require('gulp-imagemin');
-const uglify = require('gulp-minify');
-const del = require('del');
 const fileinclude = require('gulp-file-include');
-const replace = require('gulp-replace');
+const imagemin = require('gulp-imagemin');
+const scss = require('gulp-sass');
+const uglify = require('gulp-minify');
 
 const config = {
   app: {
@@ -29,6 +28,7 @@ const config = {
     js: './dist/js'
   }
 }
+
 
 function liveReload(done) {
   browserSync.init({
@@ -82,11 +82,6 @@ function watchFiles(done) {
   done();
 }
 
-function cleanUp() {
-  return del([config.dist.base]);
-}
-
-
 function htmlPathTask(done) {
   src(config.app.html)
     .pipe(fileinclude({
@@ -116,6 +111,7 @@ function cssPathTask(done) {
 
 function jsPathTask(done) {
   src(config.app.js)
+    .pipe(babel({presets: ['@babel/preset-env'] })) 
     .pipe(concat('script.js'))
     .pipe(uglify())
     .pipe(dest(config.dist.js))

@@ -19,6 +19,8 @@
       font-size: 156px; }
     .header__title-secondary {
       padding-left: 125px;
+      opacity: 0;
+      margin-top: 60px;
       color: #666666;
       font-family: "EB Garamond", serif;
       font-size: 26px;

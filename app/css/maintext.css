@@ -11,12 +11,16 @@
   font-family: "Lato", sans-serif;
   font-weight: 400; }
   .text__paragraph {
-    font-size: 16px; }
+    font-size: 16px;
+    opacity: 0;
+    margin-top: 30px; }
   .text__quote {
     position: relative;
     margin-top: 30px;
     color: #af8948;
     line-height: 1.2;
+    transform: scale(0.7);
+    opacity: 0;
     font-family: "EB Garamond", serif;
     font-size: 40px;
     font-weight: 700;
@@ -32,6 +36,7 @@
       height: 59px;
       content: ''; }
   .text__quote-author {
+    opacity: 0;
     margin-top: 15px;
     margin-bottom: 30px;
     font-size: 14px;

@@ -24,6 +24,8 @@
     }
     &-secondary {
       padding-left: 125px;
+      opacity:0;
+      margin-top: 60px;
       color: $colorTextSecondary;
       font: {
         family: $fontHeadline;

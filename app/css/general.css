@@ -11,6 +11,8 @@
 .paragraph {
   color: #1f1f1f;
   line-height: 1.5;
+  opacity: 0;
+  margin-top: 30px;
   font-family: "Lato", sans-serif;
   font-size: 16px;
   font-weight: 400; }

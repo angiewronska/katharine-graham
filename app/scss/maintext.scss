@@ -18,12 +18,16 @@
  
   &__paragraph {
     font-size: 16px;
+    opacity:0;
+    margin-top: 30px;
   }
   &__quote {
     position: relative;
     margin-top: 30px;
     color: $colorTextFocus;
     line-height: 1.2;
+    transform: scale(0.7);
+    opacity: 0;
     font: {
       family: $fontHeadline;
       size: 40px;
@@ -43,6 +47,7 @@
     }
   }
   &__quote-author {
+    opacity:0;
     margin: {
       top: 15px;
       bottom: 30px;
