@@ -20,7 +20,7 @@ const createTimeline = (i) => {
   sliderTimeline.append(timelineYear);
 }
 
-for(i=0; i<sliderItems.length; i++) {
+for(let i=0; i<sliderItems.length; i++) {
   createDots(i);
   createTimeline(i);
 }
@@ -40,7 +40,7 @@ const showSlides = (index) => {
     slideIndex = sliderItems.length - 1;
   }
 
-  for (i = 0; i < sliderItems.length; i++) {
+  for (let i = 0; i < sliderItems.length; i++) {
       sliderItems[i].classList.remove('active');
       dots[i].classList.remove('active');
       years[i].classList.remove('active');

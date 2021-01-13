@@ -131,7 +131,7 @@ var createTimeline = function createTimeline(i) {
   sliderTimeline.append(timelineYear);
 };
 
-for (i = 0; i < sliderItems.length; i++) {
+for (var i = 0; i < sliderItems.length; i++) {
   createDots(i);
   createTimeline(i);
 }
@@ -150,10 +150,12 @@ var showSlides = function showSlides(index) {
     slideIndex = sliderItems.length - 1;
   }
 
-  for (i = 0; i < sliderItems.length; i++) {
-    sliderItems[i].classList.remove('active');
-    dots[i].classList.remove('active');
-    years[i].classList.remove('active');
+  for (var _i = 0; _i < sliderItems.length; _i++) {
+    sliderItems[_i].classList.remove('active');
+
+    dots[_i].classList.remove('active');
+
+    years[_i].classList.remove('active');
   }
 
   sliderItems[index].classList.add('active');
