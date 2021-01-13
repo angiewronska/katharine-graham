@@ -1,0 +1,179 @@
+@import 'variables';
+
+.events {
+  position: relative;
+  max-width: 950px;
+  margin: 60px auto;
+  padding-left: 60px;
+  .events__title {
+    padding: 10px 30px 10px 0;
+    display: inline-block;
+    height: 42px;
+    border-right: 2px solid $colorTextFocus;
+    color: $colorTextMain;
+    text-transform: uppercase;
+    font: {
+      family: $fontText;
+      size: 24px;
+      weight: 400;
+    }
+  }
+  .events__info {
+    height: 42px;
+    padding: 10px 30px 10px;
+    display: inline-block;
+    width: 230px;
+    color: $colorTextMain;
+    font: {
+      family: $fontText;
+      size: 14px;
+      weight: 400;
+    }
+  }
+  .events__slider {
+    .slider__items {
+      .item {
+        display: none;
+        position: relative;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        min-height: 506px;
+        &.active {
+          display: block;
+          .item-text {
+            animation: moveIn .6s ease-in;
+          }
+        }
+        .item-caption {
+          margin-top: 5px;
+          color: $colorTextSecondary;
+          font: {
+            family: $fontText;
+            size: 12px;
+            weight: 400;
+          }
+        }
+        .item-text {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding: 40px 20px;
+          width: 308px;
+          background-color: $colorTextMain;
+          .item-text--year {
+            display: inline-block;
+            border-bottom: 2px solid $colorElementFocus;
+            padding-bottom: 10px;
+            color: $colorTextSlider;
+            font: {
+              family: $fontHeadline;
+              size: 26px;
+              weight: 700;
+            }
+          }
+          .item-text--paragraph {
+            color: $colorTextSlider;
+            line-height: 1.5;
+            font: {
+              family: $fontText;
+              size: 16px;
+              weight: 400;
+            }
+          }
+        }
+      }
+    }
+    .slider__nav {
+      position: absolute;
+      top: 0;
+      right: 30px;
+      .slider__nav-arrow {
+        width: 45px;
+        height: 45px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: {
+          color: $colorElementDisable;
+          image: url('../img/arrow.svg');
+          size: 9px 18px;
+          repeat: no-repeat;
+          position: center;
+        }
+        &:hover {
+          background-color: $colorElementFocus;
+        }
+        &--next {
+          transform: rotate(180deg);
+        }
+        &--disable {
+          cursor: not-allowed;
+        }
+      }
+    }
+    #slider__dots {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      .slider__dots-dot {
+        margin: 5px;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border: 1px solid $colorTextMain;
+        border-radius: 100%;
+        cursor: pointer;
+        &.active {
+          background-color: $colorElementFocus;
+        }
+        &:hover {
+          opacity:.6;
+        }
+      }
+    }
+    #slider__timeline {
+      position: absolute;
+      top: 30%;
+      left: 0;
+      padding: 0;
+      .slider__timeline-year {
+        list-style: none;
+        margin: 10px 0;
+        position: relative;
+        cursor: pointer;
+        color: $colorTextSecondary;
+        font: {
+          family: $fontText;
+          size: 10px;
+          weight: 400;
+        }
+        &:hover {
+          opacity: .6;
+        }
+        &.active {
+          color: $colorTextMain;
+          &::after {
+            animation: fadeIn .2s ease-in;
+            position: absolute;
+            top: 6px;
+            left: 0;
+            z-index: -1;
+            width: 36px;
+            height: 11px;
+            background-color: $colorElementFocus;
+            content: '';
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {width:0}
+  to{width: 36px;}
+}
+@keyframes moveIn {
+  from {opacity:0;right:60px}
+  to{wopacity:1;right:0}
+}

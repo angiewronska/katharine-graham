@@ -1,0 +1,140 @@
+.events {
+  position: relative;
+  max-width: 950px;
+  margin: 60px auto;
+  padding-left: 60px; }
+  .events .events__title {
+    padding: 10px 30px 10px 0;
+    display: inline-block;
+    height: 42px;
+    border-right: 2px solid #af8948;
+    color: #1f1f1f;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-weight: 400; }
+  .events .events__info {
+    height: 42px;
+    padding: 10px 30px 10px;
+    display: inline-block;
+    width: 230px;
+    color: #1f1f1f;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 400; }
+  .events .events__slider .slider__items .item {
+    display: none;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    min-height: 506px; }
+    .events .events__slider .slider__items .item.active {
+      display: block; }
+      .events .events__slider .slider__items .item.active .item-text {
+        animation: moveIn .6s ease-in; }
+    .events .events__slider .slider__items .item .item-caption {
+      margin-top: 5px;
+      color: #666666;
+      font-family: "Lato", sans-serif;
+      font-size: 12px;
+      font-weight: 400; }
+    .events .events__slider .slider__items .item .item-text {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 40px 20px;
+      width: 308px;
+      background-color: #1f1f1f; }
+      .events .events__slider .slider__items .item .item-text .item-text--year {
+        display: inline-block;
+        border-bottom: 2px solid #8bb0af;
+        padding-bottom: 10px;
+        color: #ffffff;
+        font-family: "EB Garamond", serif;
+        font-size: 26px;
+        font-weight: 700; }
+      .events .events__slider .slider__items .item .item-text .item-text--paragraph {
+        color: #ffffff;
+        line-height: 1.5;
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        font-weight: 400; }
+  .events .events__slider .slider__nav {
+    position: absolute;
+    top: 0;
+    right: 30px; }
+    .events .events__slider .slider__nav .slider__nav-arrow {
+      width: 45px;
+      height: 45px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: #d6d5d4;
+      background-image: url("../img/arrow.svg");
+      background-size: 9px 18px;
+      background-repeat: no-repeat;
+      background-position: center; }
+      .events .events__slider .slider__nav .slider__nav-arrow:hover {
+        background-color: #8bb0af; }
+      .events .events__slider .slider__nav .slider__nav-arrow--next {
+        transform: rotate(180deg); }
+      .events .events__slider .slider__nav .slider__nav-arrow--disable {
+        cursor: not-allowed; }
+  .events .events__slider #slider__dots {
+    padding: 0;
+    display: flex;
+    justify-content: center; }
+    .events .events__slider #slider__dots .slider__dots-dot {
+      margin: 5px;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border: 1px solid #1f1f1f;
+      border-radius: 100%;
+      cursor: pointer; }
+      .events .events__slider #slider__dots .slider__dots-dot.active {
+        background-color: #8bb0af; }
+      .events .events__slider #slider__dots .slider__dots-dot:hover {
+        opacity: .6; }
+  .events .events__slider #slider__timeline {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    padding: 0; }
+    .events .events__slider #slider__timeline .slider__timeline-year {
+      list-style: none;
+      margin: 10px 0;
+      position: relative;
+      cursor: pointer;
+      color: #666666;
+      font-family: "Lato", sans-serif;
+      font-size: 10px;
+      font-weight: 400; }
+      .events .events__slider #slider__timeline .slider__timeline-year:hover {
+        opacity: .6; }
+      .events .events__slider #slider__timeline .slider__timeline-year.active {
+        color: #1f1f1f; }
+        .events .events__slider #slider__timeline .slider__timeline-year.active::after {
+          animation: fadeIn .2s ease-in;
+          position: absolute;
+          top: 6px;
+          left: 0;
+          z-index: -1;
+          width: 36px;
+          height: 11px;
+          background-color: #8bb0af;
+          content: ''; }
+
+@keyframes fadeIn {
+  from {
+    width: 0; }
+  to {
+    width: 36px; } }
+
+@keyframes moveIn {
+  from {
+    opacity: 0;
+    right: 60px; }
+  to {
+    wopacity: 1;
+    right: 0; } }
